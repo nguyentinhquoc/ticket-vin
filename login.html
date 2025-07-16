@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="./../public/img/favicon-icon.ico" />
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        referrerpolicy="no-referrer" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!-- bostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+  <script type="module" src="./assets/main-CUqFuihm.js"></script>
+  <link rel="stylesheet" href="./assets/main-DZxmk6Ix.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="login__header">
+            <div class="container">
+                <h1 class="login__title">Log In</h1>
+                <div class="login__close-btn"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form class="login__form">
+                <div class="login__field">
+                    <div class="area_code">
+                        <label for="mySelect">Country / Region</label>
+                        <select class="form-select" id="mySelect" name="contry">
+                            <option value="1">United States (+1)</option>
+                            <option value="2">VietNam (+84)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="login__field">
+                    <!-- <div class="phone_number"> -->
+                    <!-- <label class="login__label">Phone number</label> -->
+                    <input type="tel" class="phone_number" placeholder="Phone number">
+                    <!-- </div> -->
+                </div>
+
+                <p class="login__terms">
+                    By selecting the button below, I agree to platform Terms and Condition, and platform can charge my
+                    payment method.
+                </p>
+
+                <button type="submit" class="login__submit">Continue</button>
+            </form>
+            <div class="login__divider">or</div>
+
+            <div class="login__social">
+                <a href="" class="login__social-btn login__social-btn--apple">
+                    <div class="icon"><img src="./login/email.svg" alt="" /></div>
+                    Continue with email
+                </a>
+                <a href="" class="login__social-btn login__social-btn--apple">
+                    <div class="icon"><img src="./login/apple.svg" alt="" /></div>
+                    Continue with Apple
+                </a>
+                <a href="" class="login__social-btn login__social-btn--apple">
+                    <div class="icon"><img src="./login/google.svg" alt="" /></div>
+                    Continue with Google
+                </a>
+                <a href="" class="login__social-btn login__social-btn--apple">
+                    <div class="icon"><img src="./login/facebook
+.svg" alt="" /></div>
+                    Continue with facebook
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const element = document.getElementById('mySelect');
+        const choices = new Choices(element, {
+            searchEnabled: true  // Tắt ô tìm kiếm nếu không cần
+        });
+    });
+</script>
+
+</html>
