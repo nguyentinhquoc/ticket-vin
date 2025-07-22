@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="./../public/img/favicon-icon.ico" />
   <!-- ICON -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -17,8 +16,10 @@
     rel="stylesheet" />
   <!-- bostrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
-  <script type="module" src="./assets/main-DW9870Vv.js"></script>
-  <link rel="stylesheet" href="./assets/main-BzLx-IPu.css">
+  <!-- css date -->
+  <link rel="stylesheet" href="./home/DatePickerSource/style.css" />
+  <script type="module" src="./assets/main-BXA7tCJ6.js"></script>
+  <link rel="stylesheet" href="./assets/main-DDRSJFOd.css">
 </head>
 
 <body>
@@ -35,15 +36,12 @@
                 <img src="./Research.svg" alt="" />
               </button>
               <label>
-                <div>
-                  Search
-                </div>
+                <div>Search</div>
                 <input type="text" placeholder="Events, Attraction, Playground, ...." />
               </label>
             </div>
           </form>
         </div>
-
       </div>
     </header>
 
@@ -51,56 +49,56 @@
       <div class="container">
         <h2 class="booking__title">Đặt vé</h2>
         <form class="booking__form">
-          <div class="booking__field">
+          <div class="booking__field location">
             <div class="booking__icon">
               <img src="./home/location.svg" alt="Địa điểm" />
             </div>
             <div class="booking__content">
               <div class="booking__label">Địa điểm</div>
-              <div class="booking__value">Vinwonder Vũ Yêm</div>
+              <div class="booking__value location">Vinwonder Vũ Yêm</div>
             </div>
             <div class="booking__arrow">
-              <img src="./home/bottom_arrow.svg" alt="Mũi tên">
+              <img src="./home/bottom_arrow.svg" alt="Mũi tên" />
             </div>
           </div>
 
-          <div class="booking__field">
+          <div class="booking__field date">
             <div class="booking__icon">
               <img src="./home/calender.svg" alt="Ngày đi" />
             </div>
             <div class="booking__content">
               <div class="booking__label">Ngày đi</div>
-              <div class="booking__value">24 thg 7 2025</div>
+              <div class="booking__value date">_ _ thg _ _, _ _ _ _</div>
+              <input type="hidden" value="" id="bookingDate" />
             </div>
             <div class="booking__arrow">
-              <img src="./home/bottom_arrow.svg" alt="Mũi tên">
+              <img src="./home/bottom_arrow.svg" alt="Mũi tên" />
             </div>
           </div>
 
-          <div class="booking__field">
+          <div class="booking__field userPicker">
             <div class="booking__icon">
               <img src="./home/user-group.svg" alt="Đối tượng" />
             </div>
             <div class="booking__content">
               <div class="booking__label">Đối tượng</div>
-              <div class="booking__value">04 Người</div>
+              <div class="booking__value">_ _ Người</div>
             </div>
             <div class="booking__arrow">
-              <img src="./home/bottom_arrow.svg" alt="Mũi tên">
+              <img src="./home/bottom_arrow.svg" alt="Mũi tên" />
             </div>
           </div>
 
           <div class="booking__note">
-            Người lớn cao từ <strong>140cm</strong>, trẻ em <strong>80cm-140cm</strong>,
-            Người cao tuổi trên <strong>60 tuổi</strong>.
+            Người lớn cao từ <strong>140cm</strong>, trẻ em
+            <strong>80cm-140cm</strong>, Người cao tuổi trên
+            <strong>60 tuổi</strong>.
           </div>
 
           <div class="booking_btn">
             <div>
-              <p class="user">04 Người
-              </p>
-              <p class="date">24/07/2025
-              </p>
+              <p class="user">_ _ Người</p>
+              <p class="date">_ _ thg _ _, _ _ _ _</p>
             </div>
             <button>Tìm vé</button>
           </div>
@@ -113,17 +111,20 @@
       <div class="container">
         <div class="section__header">
           <h3 class="section__title">Yêu thích nhất</h3>
-          <a href="#" class="section__more"><img src="./home/right_alignment.svg" alt=""></a>
+          <a href="#" class="section__more"><img src="./home/right_alignment.svg" alt="" /></a>
         </div>
         <div class="section__list">
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -132,11 +133,14 @@
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -145,11 +149,14 @@
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -162,17 +169,20 @@
       <div class="container">
         <div class="section__header">
           <h3 class="section__title">Sunworld</h3>
-          <a href="#" class="section__more"><img src="./home/right_alignment.svg" alt=""></a>
+          <a href="#" class="section__more"><img src="./home/right_alignment.svg" alt="" /></a>
         </div>
         <div class="section__list">
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -181,11 +191,14 @@
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -194,11 +207,14 @@
           <div class="card">
             <div class="card__image">
               <img src="./home/image_demo.png" class="image_item" alt="Combo Happy Hour" />
-              <button class="card__favorite"><img src="./home/Favorite.svg" alt=""></button>
+              <button class="card__favorite">
+                <img src="./home/Favorite.svg" alt="" />
+              </button>
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối + Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -213,8 +229,7 @@
     <section class="home__section">
       <div class="container">
         <div class="section__header">
-          <h3 class="section__title">Vinwonder
-          </h3>
+          <h3 class="section__title">Vinwonder</h3>
           <a href="#" class="section__more"><img src="./home/right_alignment.svg" alt="" /></a>
         </div>
         <div class="section__list">
@@ -227,8 +242,8 @@
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối +
-                Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -243,8 +258,8 @@
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối +
-                Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -259,8 +274,8 @@
             </div>
             <div class="card__content">
               <h4 class="card__title">
-                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet tối +
-                Tata Show.
+                Combo Happy Hour: Cáp treo + Buffet tối + Tata Show. + Buffet
+                tối + Tata Show.
               </h4>
               <div class="card__location">Vinpearl Nha Trang</div>
               <div class="card__price">350,000đ – 750,000đ</div>
@@ -291,12 +306,18 @@
                 <h4 class="card__title card__title--tours">
                   Paris Adventure - 3 Days
                 </h4>
-                <div class="card__location card__location--tours">Alchemax - Los Angeles</div>
-                <div class="card__time card__time--tours">15 Apr 2022 - 15 Apr 2022</div>
-                <div class="card__price card__price--tours">350,000đ – 750,000đ</div>
+                <div class="card__location card__location--tours">
+                  Alchemax - Los Angeles
+                </div>
+                <div class="card__time card__time--tours">
+                  15 Apr 2022 - 15 Apr 2022
+                </div>
+                <div class="card__price card__price--tours">
+                  350,000đ – 750,000đ
+                </div>
               </div>
               <div class="star">
-                <img src="./home/star.svg" alt="">
+                <img src="./home/star.svg" alt="" />
                 5.0
               </div>
             </div>
@@ -313,12 +334,18 @@
                 <h4 class="card__title card__title--tours">
                   Paris Adventure - 3 Days
                 </h4>
-                <div class="card__location card__location--tours">Alchemax - Los Angeles</div>
-                <div class="card__time card__time--tours">15 Apr 2022 - 15 Apr 2022</div>
-                <div class="card__price card__price--tours">350,000đ – 750,000đ</div>
+                <div class="card__location card__location--tours">
+                  Alchemax - Los Angeles
+                </div>
+                <div class="card__time card__time--tours">
+                  15 Apr 2022 - 15 Apr 2022
+                </div>
+                <div class="card__price card__price--tours">
+                  350,000đ – 750,000đ
+                </div>
               </div>
               <div class="star">
-                <img src="./home/star.svg" alt="">
+                <img src="./home/star.svg" alt="" />
                 5.0
               </div>
             </div>
@@ -335,12 +362,18 @@
                 <h4 class="card__title card__title--tours">
                   Paris Adventure - 3 Days
                 </h4>
-                <div class="card__location card__location--tours">Alchemax - Los Angeles</div>
-                <div class="card__time card__time--tours">15 Apr 2022 - 15 Apr 2022</div>
-                <div class="card__price card__price--tours">350,000đ – 750,000đ</div>
+                <div class="card__location card__location--tours">
+                  Alchemax - Los Angeles
+                </div>
+                <div class="card__time card__time--tours">
+                  15 Apr 2022 - 15 Apr 2022
+                </div>
+                <div class="card__price card__price--tours">
+                  350,000đ – 750,000đ
+                </div>
               </div>
               <div class="star">
-                <img src="./home/star.svg" alt="">
+                <img src="./home/star.svg" alt="" />
                 5.0
               </div>
             </div>
@@ -357,12 +390,18 @@
                 <h4 class="card__title card__title--tours">
                   Paris Adventure - 3 Days
                 </h4>
-                <div class="card__location card__location--tours">Alchemax - Los Angeles</div>
-                <div class="card__time card__time--tours">15 Apr 2022 - 15 Apr 2022</div>
-                <div class="card__price card__price--tours">350,000đ – 750,000đ</div>
+                <div class="card__location card__location--tours">
+                  Alchemax - Los Angeles
+                </div>
+                <div class="card__time card__time--tours">
+                  15 Apr 2022 - 15 Apr 2022
+                </div>
+                <div class="card__price card__price--tours">
+                  350,000đ – 750,000đ
+                </div>
               </div>
               <div class="star">
-                <img src="./home/star.svg" alt="">
+                <img src="./home/star.svg" alt="" />
                 5.0
               </div>
             </div>
@@ -370,7 +409,6 @@
         </div>
       </div>
     </section>
-
   </div>
   <nav>
     <ul>
@@ -400,7 +438,415 @@
       </li>
     </ul>
   </nav>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <!-- model location -->
+  <div id="addModalLocation" class="modal">
+    <div class="modal-content">
+      <div class="modal-content-header">
+        <div class="container">
+          <div class="box-title">
+            <p class="title">Chọn địa điểm</p>
+            <span class="modal-close"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.2496 0.961922C10.9246 0.636922 10.3996 0.636922 10.0746 0.961922L5.99961 5.02859L1.92461 0.953589C1.59961 0.628589 1.07461 0.628589 0.749609 0.953589C0.424609 1.27859 0.424609 1.80359 0.749609 2.12859L4.82461 6.20359L0.749609 10.2786C0.424609 10.6036 0.424609 11.1286 0.749609 11.4536C1.07461 11.7786 1.59961 11.7786 1.92461 11.4536L5.99961 7.37859L10.0746 11.4536C10.3996 11.7786 10.9246 11.7786 11.2496 11.4536C11.5746 11.1286 11.5746 10.6036 11.2496 10.2786L7.17461 6.20359L11.2496 2.12859C11.5663 1.81192 11.5663 1.27859 11.2496 0.961922Z"
+                  fill="#CE1126" />
+              </svg>
+            </span>
+          </div>
+          <div class="input-search">
+            <label>
+              <img src="./home/icon_search_location.svg" alt="" />
+              <input type="text" id="seacrhLocation" placeholder="Search" />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-content-list">
+        <div class="container">
+          <ul class="categories">
+            <li>Vinwonder <img src="./home/bottom_arrow.svg" alt="" /></li>
+            <li>Nha trang <img src="./home/bottom_arrow.svg" alt="" /></li>
+            <li>Vinwonder <img src="./home/bottom_arrow.svg" alt="" /></li>
+            <li>Vinwonder <img src="./home/bottom_arrow.svg" alt="" /></li>
+            <li>Vinwonder <img src="./home/bottom_arrow.svg" alt="" /></li>
+            <li>Vinwonder <img src="./home/bottom_arrow.svg" alt="" /></li>
+          </ul>
+          <ul class="list-items">
+            <li>Aquafield Nha Trang</li>
+            <li>Show nghệ thuật "Việt Nam Bách Nghệ"</li>
+            <li>Tắm Bùn Hòn Tằm</li>
+            <li>Vinpearl Harbour</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+            <li>VinWonders Nha Trang</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal date -->
+  <div id="addModalDatepicker" class="modal">
+    <div class="modal-content">
+      <div class="modal-content-header">
+        <div class="container">
+          <div class="box-title">
+            <p class="title">Chọn thời gian</p>
+            <span class="modal-close2"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.2496 0.961922C10.9246 0.636922 10.3996 0.636922 10.0746 0.961922L5.99961 5.02859L1.92461 0.953589C1.59961 0.628589 1.07461 0.628589 0.749609 0.953589C0.424609 1.27859 0.424609 1.80359 0.749609 2.12859L4.82461 6.20359L0.749609 10.2786C0.424609 10.6036 0.424609 11.1286 0.749609 11.4536C1.07461 11.7786 1.59961 11.7786 1.92461 11.4536L5.99961 7.37859L10.0746 11.4536C10.3996 11.7786 10.9246 11.7786 11.2496 11.4536C11.5746 11.1286 11.5746 10.6036 11.2496 10.2786L7.17461 6.20359L11.2496 2.12859C11.5663 1.81192 11.5663 1.27859 11.2496 0.961922Z"
+                  fill="#CE1126" />
+              </svg>
+            </span>
+          </div>
+          <div>
+            <p class="date-input">__ thg __,___</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="datepicker-container">
+        <div class="datepicker">
+          <!-- .datepicker-header -->
+          <div class="datepicker-header">
+            <button class="prev"></button>
+            <div class="selectDate">
+              <select class="month-input">
+                <option>Tháng 1</option>
+                <option>Tháng 2</option>
+                <option>Tháng 3</option>
+                <option>Tháng 4</option>
+                <option>Tháng 5</option>
+                <option>Tháng 6</option>
+                <option>Tháng 7</option>
+                <option>Tháng 8</option>
+                <option>Tháng 9</option>
+                <option>Tháng 10</option>
+                <option>Tháng 11</option>
+                <option>Tháng 12</option>
+              </select>
+              <select name="" class="year-input" id="">
+                <option value="2025" selected>2025</option>
+              </select>
+            </div>
+            <button class="next"></button>
+          </div>
+          <!-- /.datepicker-header -->
+          <!-- .days -->
+          <div class="days">
+            <span>CN</span>
+            <span>T2</span>
+            <span>T3</span>
+            <span>T4</span>
+            <span>T5</span>
+            <span>T6</span>
+            <span>T7</span>
+          </div>
+          <!-- /.days -->
+          <!-- .dates -->
+          <div class="dates"></div>
+          <!-- /.dates -->
+          <!-- .datepicker-footer -->
+          <div class="datepicker-footer">
+            <button class="apply">Xác nhận</button>
+          </div>
+          <!-- /.datepicker-footer -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal user -->
+  <div id="addModalUserPicker" class="modal">
+    <div class="modal-content">
+      <div class="container">
+        <div class="model-header">
+          <div><img src="./home/user-group.svg" alt="Đối tượng" /></div>
+          <p class="title">Đối tượng</p>
+        </div>
+        <div class="model-content">
+          <div class="box-user">
+            <div class="box-title">Người lớn</div>
+            <div class="box-quantity">
+              <div class="btn-minus">
+                <img src="./home/minus.svg" alt="icon minus" />
+              </div>
+              <input type="number" value="0" class="numberUser" />
+              <div class="btn-count">
+                <img src="./home/count.svg" alt="icon minus" />
+              </div>
+            </div>
+          </div>
+          <div class="box-user">
+            <div class="box-title">Trẻ em <span>(Từ 80cm-140cm)</span></div>
+            <div class="box-quantity">
+              <div class="btn-minus">
+                <img src="./home/minus.svg" alt="icon minus" />
+              </div>
+              <input type="number" value="0" class="numberUser" />
+              <div class="btn-count">
+                <img src="./home/count.svg" alt="icon minus" />
+              </div>
+            </div>
+          </div>
+          <div class="box-user">
+            <div class="box-title">Người lớn <span>(trên 60 tuổi)</span></div>
+            <div class="box-quantity">
+              <div class="btn-minus">
+                <img src="./home/minus.svg" alt="icon minus" />
+              </div>
+              <input type="number" value="0" class="numberUser" />
+              <div class="btn-count">
+                <img src="./home/count.svg" alt="icon minus" />
+              </div>
+            </div>
+          </div>
+          <div class="btn userPicker">Áp dụng</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script>
+    //Ẩn hiện location
+    document
+      .querySelector(".booking__field.location")
+      .addEventListener("click", () => {
+        document.getElementById("addModalLocation").classList.add("show");
+      });
+    document.querySelector(".modal-close2").addEventListener("click", () => {
+      document.getElementById("addModalDatepicker").classList.remove("show");
+    });
+    // search
+  </script>
+
+  <script>
+    // Chọn ngày
+    document
+      .querySelector(".booking__field.date")
+      .addEventListener("click", () => {
+        document.getElementById("addModalDatepicker").classList.add("show");
+      });
+    document.querySelector(".modal-close").addEventListener("click", () => {
+      document.getElementById("addModalDatepicker").classList.remove("show");
+    });
+
+    const datepicker = document.querySelector(".datepicker");
+    const dateInput = document.querySelector(".date-input");
+    const yearInput = datepicker.querySelector(".year-input");
+    const monthInput = datepicker.querySelector(".month-input");
+    const cancelBtn = datepicker.querySelector(".cancel");
+    const applyBtn = datepicker.querySelector(".apply");
+    const nextBtn = datepicker.querySelector(".next");
+    const prevBtn = datepicker.querySelector(".prev");
+    const dates = datepicker.querySelector(".dates");
+
+    const yearNow = new Date().getFullYear();
+    let arrListYear = [yearNow];
+    for (let index = 1; index < 3; index++) {
+      arrListYear.push(yearNow + index);
+      arrListYear.unshift(yearNow - index);
+    }
+    let stringListYear = "";
+    arrListYear.forEach((year) => {
+      stringListYear += `<option value="${year}">${year}</option>`;
+    });
+    yearInput.innerHTML = stringListYear;
+
+    let selectedDate = new Date();
+    let year = selectedDate.getFullYear();
+    let month = selectedDate.getMonth();
+
+    // show datepicker
+
+    // close datepicker on outside click
+
+    // handle apply button click event
+    applyBtn.addEventListener("click", () => {
+      // set the selected date to date input
+      const year = selectedDate.getFullYear();
+      const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+      const day = String(selectedDate.getDate()).padStart(2, "0");
+      document.querySelector(
+        ".booking__value.date"
+      ).innerHTML = `${day} Thg ${month} ${year}`;
+      document.querySelector("p.date").innerHTML = `${day}/${month}/${year}`;
+      document.querySelector(
+        "#bookingDate"
+      ).value = `${day}-${month}-${year}`;
+      console.log(document.querySelector("#bookingDate").value);
+      // hide datepicker
+      document.querySelector("#addModalDatepicker").classList.remove("show");
+    });
+
+    // handle next month nav
+    nextBtn.addEventListener("click", () => {
+      if (month === 11) year++;
+      month = (month + 1) % 12;
+      displayDates();
+    });
+
+    // handle prev month nav
+    prevBtn.addEventListener("click", () => {
+      if (month === 0) year--;
+      month = (month - 1 + 12) % 12;
+      displayDates();
+    });
+
+    // handle month input change event
+    monthInput.addEventListener("change", () => {
+      month = monthInput.selectedIndex;
+      displayDates();
+    });
+
+    // handle year input change event
+    yearInput.addEventListener("change", () => {
+      const newYear =
+        parseInt(yearInput.value, 10) || new Date().getFullYear();
+      year = Math.min(2100, Math.max(1900, newYear));
+      yearInput.value = year;
+      displayDates();
+    });
+
+    const updateYearMonth = () => {
+      monthInput.selectedIndex = month;
+      yearInput.value = year;
+    };
+
+    const handleDateClick = (e) => {
+      const button = e.target;
+
+      // remove the 'selected' class from other buttons
+      const selected = dates.querySelector(".selected");
+      selected && selected.classList.remove("selected");
+      // add the 'selected' class to current button
+      button.classList.add("selected");
+
+      // set the selected date
+      selectedDate = new Date(year, month, parseInt(button.textContent));
+
+      dateInput.innerHTML = selectedDate.toLocaleDateString("vi-VN", {
+        day: "numeric",
+        month: "short", // dùng 'short' để ra "thg 7"
+        year: "numeric",
+      });
+    };
+
+    // render the dates in the calendar interface
+    const displayDates = () => {
+      // update year & month whenever the dates are updated
+      updateYearMonth();
+
+      // clear the dates
+      dates.innerHTML = "";
+
+      //* display the last week of previous month
+
+      // get the last date of previous month
+      const lastOfPrevMonth = new Date(year, month, 0);
+
+      for (let i = 0; i <= lastOfPrevMonth.getDay(); i++) {
+        // if the last day is Saturday don't show the leading dates
+        if (lastOfPrevMonth.getDay() === 6) break;
+
+        const text = lastOfPrevMonth.getDate() - lastOfPrevMonth.getDay() + i;
+        const button = createButton(text, true);
+        dates.appendChild(button);
+      }
+
+      //* display the current month
+
+      // get the last date of the month
+      const lastOfMonth = new Date(year, month + 1, 0);
+
+      for (let i = 1; i <= lastOfMonth.getDate(); i++) {
+        const button = createButton(i, false);
+        button.addEventListener("click", handleDateClick);
+        dates.appendChild(button);
+      }
+
+      //* display the first week of next month
+
+      const firstOfNextMonth = new Date(year, month + 1, 1);
+
+      for (let i = firstOfNextMonth.getDay(); i < 7; i++) {
+        // if the first day starts on Sunday don't show the trailing dates
+        if (firstOfNextMonth.getDay() === 0) break;
+
+        const text =
+          firstOfNextMonth.getDate() - firstOfNextMonth.getDay() + i;
+        const button = createButton(text, true);
+        dates.appendChild(button);
+      }
+    };
+
+    const createButton = (text, isDisabled = false) => {
+      const button = document.createElement("button");
+      button.textContent = text;
+      button.disabled = isDisabled;
+      if (!isDisabled) {
+        const buttonDate = new Date(year, month, text).toDateString();
+        const today = buttonDate === new Date().toDateString();
+        const selected = buttonDate === selectedDate.toDateString();
+
+        button.classList.toggle("today", today);
+        button.classList.toggle("selected", selected);
+      }
+      return button;
+    };
+    displayDates();
+  </script>
+  <script>
+    // User picker
+    document
+      .querySelector(".booking__field.userPicker")
+      .addEventListener("click", () => {
+        document.getElementById("addModalUserPicker").classList.add("show");
+      });
+
+    // chọn đối tượng
+    const minus = Array.from(document.getElementsByClassName("btn-minus"));
+    const count = Array.from(document.getElementsByClassName("btn-count"));
+    const numberUser = Array.from(
+      document.getElementsByClassName("numberUser")
+    );
+    let countUsers = 0;
+    for (let index = 0; index < 3; index++) {
+      minus[index].addEventListener("click", () => {
+        if (numberUser[index].value > 0) numberUser[index].value -= 1;
+      });
+      count[index].addEventListener("click", () => {
+        if (numberUser[index].value >= 0) {
+          numberUser[index].value = Number(numberUser[index].value) + 1;
+        }
+      });
+    }
+    //Click áp dụng
+    document
+      .querySelector(".btn.userPicker")
+      .addEventListener("click", () => {
+        document.getElementById("addModalUserPicker").classList.remove("show");
+        //Cập nhật tổng giá trị
+        let count = 0
+        numberUser.forEach((v) => count = Number(v.value) + count)
+        let valueRenderUser = count > 9 ? count : '0' + count
+        //render
+        document .querySelector(".booking__field.userPicker").querySelector('.booking__value').innerHTML = valueRenderUser + ' Người'
+
+        document.querySelector('.booking_btn').querySelector('p.user').innerHTML = valueRenderUser + ' Người'
+      });
+  </script>
+</body>
 
 </html>
